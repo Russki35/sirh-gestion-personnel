@@ -5,11 +5,14 @@ package dev.sgp.web;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import dev.sgp.entite.Collaborateur;
 
 /**
  * @author ETY8
@@ -18,14 +21,9 @@ import javax.servlet.http.HttpServletResponse;
 public class EditerCollaborateurController extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse rep) throws ServletException, IOException {
-		if(req.getParameter("matricule") == null){
-			rep.sendError(400, "Matricule introuvable");
-		}
-		else{
-			rep.setStatus(201);
-			rep.getWriter().write("<h1>Edition des collaborateurs</h1>" + "<br>matricule : " + req.getParameter("matricule"));
-		}
-								
+			
+		
+		
 	}
 	
 }

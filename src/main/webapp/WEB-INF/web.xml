@@ -14,7 +14,7 @@
 	
 	<servlet-mapping>
 		<servlet-name>LCC</servlet-name>
-		<url-pattern>/collaborateurs/lister</url-pattern>
+		<url-pattern>/collaborateurs/listerCollab</url-pattern>
 	</servlet-mapping>
 	
 	<servlet-mapping>
