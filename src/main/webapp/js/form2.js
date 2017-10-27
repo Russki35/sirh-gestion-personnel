@@ -50,6 +50,12 @@ $(document).ready(function(){
         else{
             $("#secu").text(".error-message").fadeOut();
         }
+        
+        if (valid){
+        	document.forms[0].action="http://localhost:8080/sgp/collaborateurs/creerCollab";
+        	document.forms[0].method="POST";
+        	document.forms[0].submit();
+        }
 
 
         return valid;

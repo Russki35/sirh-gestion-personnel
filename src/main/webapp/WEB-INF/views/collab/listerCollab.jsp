@@ -21,6 +21,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
 	integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
 	crossorigin="anonymous"></script>
+
 <link rel="stylesheet" href="css/card.css">
 <title>Les collaborateurs</title>
 </head>
@@ -97,15 +98,16 @@
 
 			<div class="col-md-6">
 				<div class="media">
-					<img class="align-self-center mr-5" src="img/ncage.jpg"
+					<img class="align-self-center mr-5"
+						src="src/main/webapp/img/ncage.jpg"
 						alt="Generic placeholder image">
 					<div class="media-body">
 						<h5 class="mt-1"><%=collab.getNom()%>
 							<%=collab.getPrenom()%></h5>
 						<p>Fonction</p>
-						<p>DÃ©partement</p>
+						<p>Département</p>
 						<p>Email</p>
-						<p class="mb-0">TÃ©lÃ©phone</p>
+						<p class="mb-0">Téléphone</p>
 					</div>
 				</div>
 				<!-- fin media-->

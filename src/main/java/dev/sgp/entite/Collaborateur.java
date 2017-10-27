@@ -13,6 +13,9 @@ import java.time.ZonedDateTime;
  */
 public class Collaborateur {
 	
+	private static int id;
+	private static int currentId = 100;
+	
 	private String matricule;
 	private String nom;
 	private String prenom;
@@ -25,15 +28,10 @@ public class Collaborateur {
 	private Boolean actif;
 	
 	
-	
-
-
-	public Collaborateur(String nom, String prenom) {
-
+	public Collaborateur(String prenom, String nom){
 		this.nom = nom;
 		this.prenom = prenom;
 	}
-
 
 
 
@@ -54,7 +52,15 @@ public class Collaborateur {
 	}
 
 
+	public static int getId() {
+		return id;
+	}
 
+
+
+	public static void setId(int id) {
+		Collaborateur.id = id;
+	}
 
 
 	public String getMatricule() {
@@ -212,6 +218,12 @@ public class Collaborateur {
 	public void setActif(Boolean actif) {
 		this.actif = actif;
 	}
+
+
+
+
+
+	
 	
 	
 

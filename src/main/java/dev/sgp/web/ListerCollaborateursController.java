@@ -27,14 +27,14 @@ public class ListerCollaborateursController extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse rep) throws ServletException, IOException {
-		ArrayList<Collaborateur> liste = new ArrayList<>();
-		liste.add(new Collaborateur("Coty", "René"));
-		liste.add(new Collaborateur("Auriol", "Vincent"));
-		liste.add(new Collaborateur("Coty", "René"));
-		liste.add(new Collaborateur("Auriol", "Vincent"));
+		
+		collabService.sauvegarderCollaborateur(new Collaborateur("Coty", "René"));
+		collabService.sauvegarderCollaborateur(new Collaborateur("Auriol", "Vincent"));
+		collabService.sauvegarderCollaborateur(new Collaborateur("Coty", "René"));
+		collabService.sauvegarderCollaborateur(new Collaborateur("Auriol", "Vincent"));
 		
 		
-		req.setAttribute("listeNoms", liste);
+		req.setAttribute("listeNoms", collabService.listerCollaborateurs());
 		req.getRequestDispatcher("/WEB-INF/views/collab/listerCollab.jsp")
 		.forward(req, rep);
 		
