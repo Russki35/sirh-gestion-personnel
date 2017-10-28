@@ -40,7 +40,7 @@
 	</ul>
 
 	<div class="col-sm-2 offset-md-10">
-		<a class="btn btn-primary" type="submit" href="#" role="button">Ajouter
+		<a class="btn btn-primary" type="submit" href="<%=request.getContextPath() %>/collaborateurs/creerCollab" role="button">Ajouter
 			un collaborateurs</a>
 	</div>
 

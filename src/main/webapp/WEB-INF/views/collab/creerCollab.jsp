@@ -20,7 +20,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
 	integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
 	crossorigin="anonymous"></script>
-<script src="../js/form2.js"></script>
+<script src="../js/form2.js"></script> 
 
 <link rel="stylesheet" href="../css/creerCollab.css">
 <title>Créer un nouveau collaborateur</title>
@@ -55,14 +55,14 @@
 		<div class="form-group row">
 			<label class="col-sm-2 col-form-label">Date de naissance</label>
 			<div class="col-sm-6">
-				<input type="text" class="form-control" id="date" required>
+				<input type="text" class="form-control" name="date" id="date" required>
 				<div class="error-message"></div>
 			</div>
 		</div>
 		<div class="form-group row">
 			<label class="col-sm-2 col-form-label">Adresse</label>
 			<div class="col-sm-6">
-				<input type="text" class="form-control" id="adresse" required>
+				<input type="text" class="form-control" name="adresse" id="adresse" required>
 				<div class="error-message"></div>
 			</div>
 		</div>
@@ -70,7 +70,7 @@
 			<label class="col-sm-2 col-form-label">Numéro de sécurité
 				sociale</label>
 			<div class="col-sm-6">
-				<input type="text" class="form-control" id="secu" required>
+				<input type="text" class="form-control" name="secu" id="secu" required>
 				<div class="error-message"></div>
 			</div>
 		</div>

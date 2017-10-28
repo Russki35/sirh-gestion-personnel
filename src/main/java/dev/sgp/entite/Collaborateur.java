@@ -5,6 +5,7 @@ package dev.sgp.entite;
 
 import java.time.LocalDate;
 import java.time.ZonedDateTime;
+import java.util.ResourceBundle;
 
 
 /**
@@ -31,6 +32,7 @@ public class Collaborateur {
 	public Collaborateur(String prenom, String nom){
 		this.nom = nom;
 		this.prenom = prenom;
+		
 	}
 
 
@@ -45,7 +47,8 @@ public class Collaborateur {
 		this.dtn = dtn;
 		this.adresse = adresse;
 		this.secu = secu;
-		this.emailPro = emailPro;
+		String suffixe = ResourceBundle.getBundle("email").getString("email");
+		this.emailPro = nom + "." + prenom + suffixe;
 		this.photo = photo;
 		this.dateHeureCreation = dateHeureCreation;
 		this.actif = actif;

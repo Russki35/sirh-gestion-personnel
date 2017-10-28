@@ -5,6 +5,7 @@ package dev.sgp.web;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -40,6 +41,7 @@ public class CreerCollaborateurController extends HttpServlet {
 		String dtn = req.getParameter("date");
 		String adresse = req.getParameter("adresse");
 		String secu = req.getParameter("secu");
+	
 		
 		
 		//TODO instancier un collaborateur
@@ -50,6 +52,33 @@ public class CreerCollaborateurController extends HttpServlet {
 		collabService.sauvegarderCollaborateur(collab);
 		
 		req.setAttribute("listeNoms", collabService.listerCollaborateurs());
+		
+		if(nom.equals("") || prenom.equals("") || dtn.equals("") || adresse.equals("") || secu.equals("")){
+			StringBuilder str = new StringBuilder("Les parametres suivants sont manquants");
+			if(nom.equals("")){
+				str.append("nom");
+			}
+			
+			if(prenom.equals("")){
+				str.append("prenom");
+			}
+			
+			if(dtn.equals("")){
+				str.append("dtn");
+			}
+			
+			if(adresse.equals("")){
+				str.append("adresse");
+			}
+			
+			if(secu.equals("")){
+				str.append("secu");
+			}
+			
+			rep.sendError(HttpServletResponse.SC_BAD_REQUEST, str.toString());
+			
+			return;
+		}
 		
 		req.getRequestDispatcher("/WEB-INF/views/collab/listerCollab.jsp")
 		.forward(req, rep);

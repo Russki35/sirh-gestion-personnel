@@ -7,22 +7,20 @@ $(document).ready(function(){
             $("#nom").next(".error-message").fadeIn().text("Veuillez entrer un nom");
             valid = false;
         }
-        /*else if(!$("#prenom").val().match('/^[a-z]+$/i')){
-            $("#prenom").next(".error-message").fadeIn().text("Veuillez entrer un prénom valide");
-        }*/
+     
         else{
             $("#nom").text(".error-message").fadeOut();
         }
 
         
-        if($("#prenom").val() == ""){
-            $("#prenom").next(".error-message").fadeIn().text("Veuillez entrer un prénom");
+/*        if($("#prenom").val() == ""){
+           $("#prenom").next(".error-message").fadeIn().text("Veuillez entrer un prénom");
             valid = false;
         }
         else{
             $("#prenom").text(".error-message").fadeOut();
             
-        }
+        }*/
 
 
         if($("#date").val() == ""){
