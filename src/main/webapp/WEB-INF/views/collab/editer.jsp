@@ -1,5 +1,5 @@
 <%@page import="java.util.List"%>
-<%@ page language="java" pageEncoding="UTF-8"%>
+<%@page language="java" pageEncoding="UTF-8"%>
 <html>
         <head>
             
@@ -21,7 +21,7 @@
                   <a class="nav-link" href="#">Statistiques</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link disabled" href="#">ActivitÃ©s</a>
+                  <a class="nav-link disabled" href="#">Activités</a>
                 </li>
         </ul>
       
@@ -33,31 +33,31 @@
       </div>
       <div class="col-7">
           <div class="row"><div class="col-7">
-            <h1>Nom - Prenom - Matricule</h1></div><div class="offset-col-1"><label id="desactiverlabel" for="desactiverbox"><input id="desactiverbox" type="checkbox" class="form-check-input" >DÃ©sactiver</label></div></div>
+            <h1>Nom - Prenom - Matricule</h1></div><div class="offset-col-1"><label id="desactiverlabel" for="desactiverbox"><input id="desactiverbox" type="checkbox" class="form-check-input" >Désactiver</label></div></div>
             <div class="row">
               <div id="accordion" role="tablist" class="col-12">
                 <div class="card">
                   <div class="card-header" role="tab" id="headingOne">
                     <h5 class="mb-0">
                       <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        IdentitÃ©
+                        Identité
                       </a>
                     </h5>
                   </div>
                   <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
-                      <div class="row"><label class="card-text col-6">CivilitÃ©</label>
+                      <div class="row"><label class="card-text col-6">Civilité</label>
                         <select class="form-control col-6" id="exampleFormControlSelect1">
                           <option>Mr</option>
                           <option>Mme</option>
                         </select>
                       </div>
                       <div class="row"><label class="card-text col-6">Nom</label><input type="text" class="col-6" value="Bonnisseur de la Bath"/></div>
-                      <div class="row"><label class="card-text col-6">PrÃ©nom</label><input type="text" class="col-6" value="Hubert"/></div>
+                      <div class="row"><label class="card-text col-6">Prénom</label><input type="text" class="col-6" value="Hubert"/></div>
                       <div class="row"><label class="card-text col-6">Date de naissance</label><input type="text" class="col-6" value="15/09/1949"/></div>
-                      <div class="row"><label class="card-text col-6">Adresse</label><input type="text" class="col-6" value="2, Avenue RenÃ© Coty"/></div>
-                      <div class="row"><label class="card-text col-6">NumÃ©ro de sÃ©curitÃ© sociale</label><input type="text" class="col-6" value="117117117117"/></div>
-                      <div class="row"><label class="card-text col-6">TÃ©lÃ©phone</label><input type="text" class="col-6" value="117"/></div>
+                      <div class="row"><label class="card-text col-6">Adresse</label><input type="text" class="col-6" value="2, Avenue René Coty"/></div>
+                      <div class="row"><label class="card-text col-6">Numéro de sécurité sociale</label><input type="text" class="col-6" value="117117117117"/></div>
+                      <div class="row"><label class="card-text col-6">Téléphone</label><input type="text" class="col-6" value="117"/></div>
                       <div class="row"><label class="card-text col-6">Email</label><input type="text" class="col-6" value="la-blanquette-est-elle-bonne@oss.com"/></div>
                     </div>
                   </div>
@@ -72,9 +72,9 @@
                   </div>
                   <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
                     <div class="card-body">
-                      <div class="row"><label class="card-text col-6">DÃ©partement</label><select class="form-control col-6" id="exampleFormControlSelect1">
+                      <div class="row"><label class="card-text col-6">Département</label><select class="form-control col-6" id="exampleFormControlSelect1">
                         <option selected>Informatique</option>
-                        <option>ComptabilitÃ©</option>
+                        <option>Comptabilité</option>
                         <option>Ressources humaines</option>
                       </select></div>
                       <div class="row"><label class="card-text col-6">Nom</label><input type="text" class="col-6" value="ETY5"/></div>
@@ -85,7 +85,7 @@
                   <div class="card-header" role="tab" id="headingThree">
                     <h5 class="mb-0">
                       <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        CoordonnÃ©es banquaires
+                        Coordonnées banquaires
                       </a>
                     </h5>
                   </div>

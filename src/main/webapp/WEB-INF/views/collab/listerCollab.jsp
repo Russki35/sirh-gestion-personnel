@@ -67,7 +67,7 @@
 					<optgroup label="Tous">
 						<option>Comptabilité</option>
 						<option>RH</option>
-						<option>Informatique</option>
+						<option>L'Informatique</option>
 					</optgroup>
 
 				</select>
@@ -99,7 +99,7 @@
 			<div class="col-md-6">
 				<div class="media">
 					<img class="align-self-center mr-5"
-						src="src/main/webapp/img/ncage.jpg"
+						src="https://assets.chooseyourboss.com/companies/logos/000/004/322/square/Logo_DTA.jpg?1457453234"
 						alt="Generic placeholder image">
 					<div class="media-body">
 						<h5 class="mt-1"><%=collab.getNom()%>
@@ -109,6 +109,7 @@
 						<p>Email</p>
 						<p class="mb-0">Téléphone</p>
 					</div>
+					<a class="btn btn-primary" type="submit" href="<%=request.getContextPath() %>/collaborateurs/editer?matricule=<%=collab.getMatricule() %>" role="button">Editer</a>
 				</div>
 				<!-- fin media-->
 			</div>

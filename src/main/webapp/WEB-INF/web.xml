@@ -13,7 +13,7 @@
 	
 	<servlet>
 		<servlet-name>ECC</servlet-name>
-		<servlet-class>dev.sgp.web.EditerCollaborateursController</servlet-class>	
+		<servlet-class>dev.sgp.web.EditerCollaborateurController</servlet-class>	
 	</servlet>
 	
 	
