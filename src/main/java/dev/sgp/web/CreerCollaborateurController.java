@@ -4,6 +4,7 @@
 package dev.sgp.web;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,9 +48,18 @@ public class CreerCollaborateurController extends HttpServlet {
 		//TODO instancier un collaborateur
 		//TODO mettre ce new collaborateur dans la liste des collabs
 		//TODO mettre la liste dans la requête
+		String[] datesNaissance = dtn.split("/");
+		LocalDate newDateDeNaissance = LocalDate.of(Integer.parseInt(datesNaissance[2]), Integer.parseInt(datesNaissance[1]),Integer.parseInt(datesNaissance[0]));
+				
+		collabService.sauvegarderCollaborateur(new Collaborateur(
+				"M01",
+				nom, 
+				prenom, 
+				newDateDeNaissance, 
+				adresse,
+				secu, null, null, null, null, null));
 		
-		Collaborateur collab = new Collaborateur(nom, prenom);
-		collabService.sauvegarderCollaborateur(collab);
+		
 		
 		req.setAttribute("listeNoms", collabService.listerCollaborateurs());
 		

@@ -27,6 +27,7 @@ public class Collaborateur {
 	private String photo;
 	private ZonedDateTime dateHeureCreation;
 	private Boolean actif;
+	private String telephone;
 	
 	
 	public Collaborateur(String prenom, String nom){
@@ -39,7 +40,7 @@ public class Collaborateur {
 
 
 	public Collaborateur(String matricule, String nom, String prenom, LocalDate dtn, String adresse, String secu,
-			String emailPro, String photo, ZonedDateTime dateHeureCreation, Boolean actif) {
+			String emailPro, String telephone, String photo, ZonedDateTime dateHeureCreation, Boolean actif) {
 
 		this.matricule = matricule;
 		this.nom = nom;
@@ -47,6 +48,7 @@ public class Collaborateur {
 		this.dtn = dtn;
 		this.adresse = adresse;
 		this.secu = secu;
+		this.telephone = telephone;
 		String suffixe = ResourceBundle.getBundle("email").getString("email");
 		this.emailPro = nom + "." + prenom + suffixe;
 		this.photo = photo;
@@ -158,6 +160,20 @@ public class Collaborateur {
 		this.secu = secu;
 	}
 
+
+	
+
+
+	public String getTelephone() {
+		return telephone;
+	}
+
+
+
+
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
 
 
 

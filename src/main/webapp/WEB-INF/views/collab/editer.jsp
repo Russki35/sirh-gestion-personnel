@@ -1,5 +1,9 @@
 <%@page import="java.util.List"%>
 <%@page language="java" pageEncoding="UTF-8"%>
+<%@page import="dev.sgp.entite.Collaborateur"%>
+<%
+	Collaborateur collab = (Collaborateur) request.getAttribute("collaborateur");
+%>
 <html>
         <head>
             
@@ -34,6 +38,9 @@
       <div class="col-7">
           <div class="row"><div class="col-7">
             <h1>Nom - Prenom - Matricule</h1></div><div class="offset-col-1"><label id="desactiverlabel" for="desactiverbox"><input id="desactiverbox" type="checkbox" class="form-check-input" >Désactiver</label></div></div>
+            <%=collab.getMatricule()%>
+				<input type=hidden name="matricule"
+					value="<%=collab.getMatricule()%>" />
             <div class="row">
               <div id="accordion" role="tablist" class="col-12">
                 <div class="card">
@@ -52,13 +59,20 @@
                           <option>Mme</option>
                         </select>
                       </div>
-                      <div class="row"><label class="card-text col-6">Nom</label><input type="text" class="col-6" value="Bonnisseur de la Bath"/></div>
-                      <div class="row"><label class="card-text col-6">Prénom</label><input type="text" class="col-6" value="Hubert"/></div>
+                      
+                      <div class="row"><label class="card-text col-6">Nom</label><input name="nom"
+											type="text" class="col-12" value="<%=collab.getNom()%>" /></div>
+                      <div class="row"><label class="card-text col-6">Prénom</label><input name="prenom"
+											type="text" class="col-12" value="<%=collab.getPrenom()%>" /></div>
                       <div class="row"><label class="card-text col-6">Date de naissance</label><input type="text" class="col-6" value="15/09/1949"/></div>
-                      <div class="row"><label class="card-text col-6">Adresse</label><input type="text" class="col-6" value="2, Avenue René Coty"/></div>
-                      <div class="row"><label class="card-text col-6">Numéro de sécurité sociale</label><input type="text" class="col-6" value="117117117117"/></div>
-                      <div class="row"><label class="card-text col-6">Téléphone</label><input type="text" class="col-6" value="117"/></div>
-                      <div class="row"><label class="card-text col-6">Email</label><input type="text" class="col-6" value="la-blanquette-est-elle-bonne@oss.com"/></div>
+                      <div class="row"><label class="card-text col-6">Adresse</label><input name="adresse"
+											type="text" class="col-12" value="<%=collab.getAdresse()%>" /></div>
+                      <div class="row"><label class="card-text col-6">Numéro de sécurité sociale</label><input name="secu"
+											type="text" class="col-12" value="<%=collab.getSecu()%>" /></div>
+                      <div class="row"><label class="card-text col-6">Téléphone</label><input name="telephone"
+											type="text" class="col-12" value="<%=collab.getTelephone()%>" /></div>
+                      <div class="row"><label class="card-text col-6">Email</label><input type="text"
+											class="col-12" value="<%=collab.getEmailPro()%>" /></div>
                     </div>
                   </div>
                 </div>
